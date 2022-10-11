@@ -1,71 +1,87 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UseScoreException {
-    static Scanner scanning=new Scanner(System.in);
+    static Scanner scanning;
+
+    public UseScoreException() {
+    }
+
     public static void main(String[] args) {
-        scoreOutput();
-        stringScore();
-
-
-
-
-//        System.out.println("Enter the number");
-//        int inputNumber=scanning.nextInt();
-//        double squareOfNumber=squareOfNumber(inputNumber);
-//        System.out.print(squareOfNumber);
+        inputUserScoreAndPrintOutput();
     }
-    public static void stringScore(){
-        System.out.println("Do you want to enter another score");
-        String userStringResponse=scanning.nextLine();
-        if(userStringResponse.equals("Yes")) {
-            System.out.println("Enter the string Score");
-            String stringScore = scanning.nextLine();
-            checkForStringInput(stringScore);
-        }
-        else{
-            stringScore();
+
+    public static void inputUserScoreAndPrintOutput() {
+        boolean inCorrectScore = true;
+        int count = 0;
+
+        while(true) {
+            String userResponse1;
+            do {
+                if (!inCorrectScore) {
+                    return;
+                }
+
+                if (count == 0) {
+                    System.out.println("Do you want to enter Score?");
+                } else {
+                    System.out.println("Do you want to enter another Score?");
+                }
+
+                userResponse1 = scanning.nextLine();
+            } while(!userResponse1.equals("Yes") && !userResponse1.equals("Y"));
+
+            System.out.println("Enter the score");
+
+            try {
+                int inputScore = scanning.nextInt();
+                if (!checkForOutOfRangeInputScore(inputScore)) {
+                    System.out.println("The entered score is correct");
+                    inCorrectScore = false;
+                } else {
+                    ++count;
+                }
+            } catch (InputMismatchException var4) {
+                ++count;
+                System.out.println("Please enter an integer");
+            }
         }
     }
-    public static void scoreOutput(){
-    System.out.println("Do you want to enter Score?");
-    String userResponse1=scanning.nextLine();
-        if(userResponse1.equals("Yes")) {
-        System.out.println("Enter the score");
-        int inputScore = scanning.nextInt();
-        scoreBoard(inputScore);
-    }else {
-        System.out.println("Thanks for visiting");
-    }}
-    public static void checkForStringInput(String stringScore){
+
+    public static boolean checkForStringInputScore(int inputScore) {
+        boolean isAString = false;
+
         try {
-            float numericValueOfScore = Float.parseFloat(stringScore);
-        }catch(Exception NumberFormatException){
-            System.out.println("NumberFormatException \n You must enter a number for the score!" );
+            float var2 = Float.parseFloat(Integer.toString(inputScore));
+        } catch (Exception var3) {
+            isAString = true;
+            System.out.println("NumberFormatException \n You must enter a number for the score!");
         }
+
+        return isAString;
     }
-    public static void scoreBoard(int inputScore){
-        if(inputScore>100||inputScore<0){
+
+    public static boolean checkForOutOfRangeInputScore(int inputScore) {
+        boolean isOutOfRange = false;
+        if (inputScore > 100 || inputScore < 0) {
+            isOutOfRange = true;
+
             try {
                 throw new ScoreException();
-            }catch(Exception e){
-                System.out.println(e.getMessage());
-            }
-
-        }
-        else {
-            System.out.println("That is a valid score." );
-        }
-    }
-    public static double squareOfNumber(int inputNumber) {
-        if(inputNumber<0) {
-            try {
-                throw new NegativeNumberSquareException();
-            } catch (Exception e) {
-                System.out.println(e);
+            } catch (Exception var3) {
+                System.out.println(var3.getMessage());
             }
         }
-    double squareOfNumber=Math.pow(inputNumber,2);
-    return squareOfNumber;
+
+        return isOutOfRange;
     }
 
+    static {
+        scanning = new Scanner(System.in);
+    }
 }

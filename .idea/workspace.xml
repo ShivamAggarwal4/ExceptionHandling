@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74c09165-9a8d-4e4f-979d-a485525a1cde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExceptionHandling.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CheckedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EmployeeExistenceCheckup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScoreException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UncheckedExceptionThrowA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UncheckedExceptionThrowB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UncheckedExceptionThrowC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UseScoreException.java" afterDir="false" />
+    <list default="true" id="74c09165-9a8d-4e4f-979d-a485525a1cde" name="Changes" comment="ExceptionHandling">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UseScoreException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UseScoreException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +21,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -49,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/beehyv/IdeaProjects/ExceptionHandling"
+    "last_opened_file_path": "/home/beehyv/IdeaProjects/FileHandling"
   }
 }]]></component>
   <component name="RunManager" selected="Application.EmployeeExistenceCheckup">
@@ -83,6 +77,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664856784392</updated>
     </task>
+    <task id="LOCAL-00001" summary="ExceptionHandling">
+      <created>1665491754315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665491754315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +97,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ExceptionHandling" />
+    <option name="LAST_COMMIT_MESSAGE" value="ExceptionHandling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -110,8 +116,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/UseScoreException.java</url>
-          <line>4</line>
-          <properties class="UseScoreException" method="main">
+          <properties class="UseScoreException">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
